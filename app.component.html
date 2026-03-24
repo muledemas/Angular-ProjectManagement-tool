@@ -1,0 +1,21 @@
+<div *ngIf="adlog!=3">
+  <button [disabled]="isDisable==1" routerLink="login" (click)="disablebutton(1)">Login</button>
+  <button [disabled]="isDisable==2" routerLink="register" (click)="disablebutton(2)">Register</button>
+
+  <!-- <router-outlet></router-outlet> -->
+
+</div>
+
+
+<div *ngIf="adlog==1">
+  <app-login-user></app-login-user>
+</div>
+
+<div *ngIf="adlog==2">
+  <app-register-user></app-register-user>
+</div>
+
+<div *ngIf="adlog==3">
+  <app-dashboard></app-dashboard>
+  
+</div>

@@ -1,0 +1,45 @@
+<div *ngIf="show!=1">
+    <button class="btn" (click)="isshow(1)"> <img src="assets/back.png"></button>
+
+    <h1>Project Listing</h1>
+    <table border="2">
+        <tr>
+            <td>ID</td>
+            <td>PROJECT NAME</td>
+            <td>REASON</td>
+            <td>TYPE</td>
+            <td>DIVISION</td>
+            <td>DEPARTMENT</td>
+            <td>START DATE</td>
+            <td>END DATE</td>
+            <td>LOCATIONS</td>
+            <td>STATUS</td>
+        </tr>
+
+        <tr *ngFor="let project of myProject;let i=index">
+            <td>{{i+1}}</td>
+
+            <td>{{project.projectName}}</td>
+            <td>{{project.reason}}</td>
+            <td>{{project.type}}</td>
+            <td>{{project.division}}</td>
+            <td>{{project.department}}</td>
+            <td>{{project.startDate}}</td>
+            <td>{{project.endDate}}</td>
+            <td>{{project.locations}}</td>
+            <td>{{project.status}}</td>
+            <td>
+                <button (click)="checkStatus(project.id)">Start</button>
+                <button (click)="checkStatusclo(project.id)">Closed</button>
+                <button (click)="checkStatuscan(project.id)">Cancelled</button>
+
+
+            </td>
+        </tr>
+    </table>
+</div>
+<div *ngIf="show==1">
+
+    <app-dashboard></app-dashboard>
+
+</div>

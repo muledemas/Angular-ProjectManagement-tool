@@ -1,0 +1,44 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #fff;
+  }
+  
+  
+  
+  tr:hover {
+    background-color: #d4d4d4;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #bf00ff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  img{
+    width: 20px;
+    height: 20px;
+    color: white;
+    /* margin-top: 80px; */  
+  }
+  .back{
+    margin-top: 20px;
+  }

@@ -1,0 +1,86 @@
+<!-- <div *ngIf="show==0" class="back"> -->
+
+    
+
+
+<div *ngIf="show!=1" class="menu">
+
+    <button class="btn" (click)="isshow(1)"> <img src="assets/back.png"></button>
+    <h1>Add Project</h1>
+    
+    <ul>
+    ProjectName:
+    <br>
+    <textarea cols="30" rows="2" [(ngModel)]="details.projectName"></textarea><br>
+    
+
+    Reason: <br>
+    <select [(ngModel)]="details.reason">
+        <option>--Select--</option>
+        <option value="Business">Business</option>
+        <option value="Dealership">Dealership</option>
+        <option value="Transport">Transport</option>
+    </select> <br>
+
+
+
+    Type: <br>
+    <select [(ngModel)]="details.type">
+        <option>--Select--</option>
+        <option value="Internal">Internal</option>
+        <option value="External">External</option>
+        <option value="Vendor">Vendor</option>
+    </select> <br>
+
+    Division: <br>
+    <select [(ngModel)]="details.division">
+        <option>--Select--</option>
+        <option value="Compressor">Compressor</option>
+        <option value="Filter">Filter</option>
+        <option value="Pumps">Pumps</option>
+        <option value="glass">glass</option>
+
+    </select> <br>
+
+    Department: <br>
+    <select [(ngModel)]="details.department">
+        <option>--Select--</option>
+        <option value="Strategy">Strategy</option>
+        <option value="Quality">Quality</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Stores">Stores</option>
+        <option value="Finance">Finance</option>
+
+    </select> <br>
+
+    </ul>
+<ul>
+    StartDate: <br>
+    <input type="date" [(ngModel)]="details.startDate"> <br>
+    EndDate : <br>
+    <input type="date" [(ngModel)]="details.endDate"> <br>
+
+    Locations: <br>
+    <select [(ngModel)]="details.locations">
+        <option>--Select--</option>
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Latur">Latur</option>
+
+    </select> <br>
+
+    Status: {{Statusvalue}} <br>
+
+    <button (click)="adproject()">AddProject</button>
+
+    </ul>
+
+</div>
+
+<div *ngIf="show==1">
+
+<app-dashboard></app-dashboard>
+
+</div>

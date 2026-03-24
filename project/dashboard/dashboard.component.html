@@ -1,0 +1,36 @@
+<div *ngIf="show==0">
+ 
+  <h1>Dashboard</h1>
+
+  <button routerLink="addproject" (click)="isshow(1)">AddProject</button>
+  <button routerLink="showallproject" (click)="isshow(2)">ShowAllProject</button>
+  <!-- <router-outlet></router-outlet> -->
+</div>
+
+<div *ngIf="show==1">
+  <app-addproject></app-addproject>
+</div>
+
+<div *ngIf="show==2">
+  <app-showallproject></app-showallproject>
+</div>
+
+
+
+<div *ngIf="show==0">
+  <h1>All Project details</h1> <br>
+  <table border="2">
+
+
+    <h3>
+      <td>Total Project : {{obj.projectCnt}}</td>
+      <td>Running Project : {{obj.runningCnt}}</td>
+
+      <td>Closed Project :{{obj.closedCnt}}</td>
+
+      <td>Cancelled Project :{{obj.cancelledCnt}}</td>
+    </h3>
+
+  </table>
+
+</div>
